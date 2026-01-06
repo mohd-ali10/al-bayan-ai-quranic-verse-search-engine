@@ -1,4 +1,4 @@
-# Dataset Splitting Guide (GitHub-Friendly)
+# Dataset Splitting Guide
 
 ## Overview
 
