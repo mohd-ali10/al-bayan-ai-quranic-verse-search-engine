@@ -150,20 +150,6 @@ Visit: `http://127.0.0.1:5000`
 
 ---
 
-## 📦 Dataset Information
-
-Due to GitHub file size limitations, large Quran and Tafsir datasets may not be included. Access full datasets via Google Drive:
-
-> [Add your Google Drive dataset link here]
-
-**Included in `data/` folder:**
-
-* Arabic Quran text (`quran.json`)
-* English & Urdu translations (`quran_with_urdu.json`)
-* Tafsir Ibn Kathir (English & Urdu)
-
----
-
 ##  Screenshots
 
 Screenshots of UI and features can be added to an `assets/` folder and referenced here.
@@ -179,4 +165,5 @@ This project is developed strictly for educational and academic purposes as a Fi
 ## 🕌 Acknowledgments
 
 All Quranic text and Tafsir content are used with respect and solely for educational research purposes.
+
 
