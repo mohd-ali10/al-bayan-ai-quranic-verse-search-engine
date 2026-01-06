@@ -17,7 +17,7 @@ app = Flask(__name__)
 # AI CONFIGURATION 
 # ==========================================
 # Consider using os.environ for security in production
-GEMINI_API_KEY = "AIzaSyDkKCfA_jl81oxpeZ9679AvXu6nsfM3xJE" 
+GEMINI_API_KEY = "YOUR API KEY WRITE HERE" 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # ==========================================
@@ -204,4 +204,5 @@ def ask_ai():
         return jsonify({"answer": "### AI Insight Unavailable\nI'm having trouble connecting to the knowledge base right now. Please try again in a moment."}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=False, use_reloader=False, port=5000)
