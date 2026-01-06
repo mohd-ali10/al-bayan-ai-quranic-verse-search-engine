@@ -1,21 +1,13 @@
-# Dataset Construction
+Due to GitHub’s 25 MB limit, the dataset is split into two nearly equal-sized files.
 
-The final dataset used by the application is `quran_complete.json`.
+To reconstruct:
+python
+Copy code
+import json
 
-## Data Preparation Pipeline
-Multiple source datasets containing Arabic text, translations,
-and Tafsir were used during preprocessing. These datasets were
-cleaned, aligned at the verse level, and merged into a single
-normalized JSON structure.
+with open("quran_part_1.json") as f1, open("quran_part_2.json") as f2:
+    d1 = json.load(f1)
+    d2 = json.load(f2)
 
-## Final Dataset
-- quran_complete.json
-  - Arabic Quran text
-  - English translation (Sahih International)
-  - Urdu translation
-  - Tafsir Ibn Kathir (English & Urdu)
-  - Surah and Ayah metadata
-
-## Source Datasets
-The `sources/` directory contains the original datasets used
-only during preprocessing and is not accessed at runtime.
+d1["verses"].extend(d2["verses"])
+dataset = d1
