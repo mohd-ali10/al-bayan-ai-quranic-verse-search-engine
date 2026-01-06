@@ -1,0 +1,33 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# Environment variables (API keys)
+.env
+
+# VS Code settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook cache
+.ipynb_checkpoints/
+
+# Log files
+*.log
+
+# Temporary / backup files
+*.tmp
+*.bak
+
+# Model files (if generated locally)
+*.pt
+*.bin
