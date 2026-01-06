@@ -51,6 +51,7 @@
 
 * Custom Quran JSON dataset
 * Tafsir Ibn Kathir (English & Urdu)
+> Note: Due to GitHub’s 25 MB file size limit, the final dataset is split into two JSON files and merged dynamically at runtime.
 
 ---
 
@@ -59,18 +60,56 @@
 ```
 AL-BAYAN/
 │
-├── backend/
-│   ├── app.py
-│   ├── search_engine.py
-│   ├── models.py
-│   ├── utils.py
-│   ├── cli.py
-│   └── requirements.txt
+├── app.py                      # Main Flask application
+├── search_engine.py            # Hybrid search + RAG logic
+├── models.py                   # ML model loading & embeddings
+├── utils.py                    # Helper functions
+├── cli.py                      # Optional CLI interface
 │
-├── templates/        # HTML UI files
-├── static/           # CSS, JS, assets
-├── data/             # Quran and Tafsir datasets
-├── README.md
+├── requirements.txt            # Python dependencies
+├── .gitignore                  # Ignored files
+├── README.md                   # Main project documentation
+│
+├── templates/                  # Frontend HTML templates
+│   ├── base.html
+│   ├── index.html
+│   ├── search.html
+│   ├── browse.html
+│   └── about.html
+│
+├── static/                     # Static frontend assets
+│   ├── css/
+│   │   └── styles.css
+│   │
+│   ├── js/
+│   │   └── main.js
+│   │
+│   └── assets/                 # Screenshots (for viva)
+│       ├── Home.png
+│       ├── Browse_Surah.png
+│       ├── About.png
+│       └── README.md
+│
+├── data/                       # Dataset directory
+│   ├── README.md               # Dataset explanation
+│   │
+│   ├── quran_part_1.json       # Surah 1–57
+│   ├── quran_part_2.json       # Surah 58–114
+│   │
+│   └── sources/                # Raw / optional datasets
+│       ├── README.md
+│       ├── quran.json
+│       ├── quran_ur.json
+│       ├── quran_with_urdu.json
+│       ├── en-tafsir-ibn-kathir.json
+│       └── tafseer-ibn-e-kaseer-urdu.json
+│
+└── scripts/                    # Data preprocessing scripts
+    ├── merge_english_urdu.py
+    ├── merge_tafseer.py
+    ├── final_merge.py
+    └── precompute_embeddings.py
+
 ```
 
 ---
@@ -140,3 +179,4 @@ This project is developed strictly for educational and academic purposes as a Fi
 ## 🕌 Acknowledgments
 
 All Quranic text and Tafsir content are used with respect and solely for educational research purposes.
+
